@@ -1,0 +1,219 @@
+/* ====  COLORS  ======
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%)
+
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+
+*/ 
+/*=== RESETS ===*/
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+body,p,h1,h2,h3,h4{
+  margin: 0;
+  padding: 0;
+}
+
+/*=== variables  ====*/
+
+:root{
+  --whitee: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lav: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+  --ligth-red: hsl(0, 100%, 67%);
+  --oyellow:hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+}
+
+/*=== FONTS  ====*/
+
+html{
+  font-size: 18px;
+}
+
+body{
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.results p{
+  font-size: 0.9rem;
+  color: var(--light-lav);
+  font-weight: 700;
+}
+.scores p{
+  color: lightslategrey;
+  font-weight: 700;
+}
+.summary p{
+  color: lightslategray;
+}
+
+h2{
+  color: var(--whitee);
+}
+
+h4{
+  color: var(--light-lav);
+}
+
+.dark-blue{
+  color:var(--dark-gray-blue);
+}
+
+.ability__reaction{
+  color: var(--ligth-red);
+}
+
+.ability__memory{
+  color: var(--oyellow);
+}
+.ability__verbal{
+  color: var(--green-teal);
+}
+.ability__visual{
+  color: var(--cobalt-blue);
+}
+
+/* main stuff  */
+
+.wrapper{
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border-radius: 20px;
+  margin: 0 auto;
+  min-width: none;
+  max-width: 752px;
+  width: 100%;
+}
+
+.container{
+  width: 375px;
+  height: 100%;
+}
+
+/* Your results   */
+
+.results{
+  text-align: center;
+  background: linear-gradient( hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  padding: 2em 0;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border-radius: 0 0 25px 25px;
+}
+.scores{
+  background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+  padding: 1.2em 2em;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.score-text{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.total{
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* SUMMARY  */
+
+.summary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.summary-title{
+  align-self: flex-start;
+  margin-left: 1.5em;
+  color: var(--dark-gray-blue);
+}
+.ability{
+  display: flex;
+  gap: 20px;
+}
+.row{
+  padding: 0.9em;
+  border-radius: 10px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+/* Change hue value to the representing color, lred, oyellow, cgreen and blue = hsl(221, 100%, 96%) */
+.reaction{
+  background-color: hsl(0, 100%, 96%);
+}
+.memory{
+  background-color: hsl(42, 100%, 96%);
+}
+.verbal{
+  background-color: hsl(129, 100%, 96%);
+}
+.visual{
+  background-color: hsl(221, 100%, 96%);
+}
+
+.btn{
+  margin: 1em 0;
+  display: block;
+  width: 90%;
+  border: none;
+  background-color: var(--dark-gray-blue);
+  padding: 1em;
+  color: var(--whitee);
+  font-size: 1rem;
+  border-radius: 50px;
+}
+/* === MEIDA QUERY === */
+
+@media (min-width: 1440px){
+  .wrapper{
+    margin: 100px auto;
+    flex-direction: row;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+  }
+  .results{
+    border-radius: 25px;
+    padding: 4em 2em;
+  }
+}
+
+/* FOOTER */
+
+footer{
+  text-align: center;
+  margin-top: 100px;
+}
