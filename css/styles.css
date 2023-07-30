@@ -54,6 +54,12 @@ html{
 
 body{
   font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--whitee);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .results p{
@@ -199,7 +205,7 @@ h4{
 }
 /* === MEIDA QUERY === */
 
-@media (min-width: 1440px){
+@media (min-width: 800px){
   .wrapper{
     margin: 100px auto;
     flex-direction: row;
