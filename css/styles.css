@@ -57,7 +57,7 @@ body{
 }
 
 .results p{
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--light-lav);
   font-weight: 700;
 }
